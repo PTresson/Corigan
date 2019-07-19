@@ -1,6 +1,8 @@
-# Corigan
+# CORIGAN
 
-We recommand that you have tested the Darknet framework first. For basic functionning of the neural network, please refer to https://github.com/AlexeyAB/darknet
+Corigan is a pipeline for the detection of small objects on large input images and the analysis of the interctions between these objects.
+
+Neural network related computations are performed within the Darknet framework provided by J. Redmon and maintained by AlexeyAB https://github.com/AlexeyAB/darknet. We recommand that you have tested the Darknet framework first.
 To work, Darknet needs a .cfg file specifying the configuration of the network, a .names file specifying the classes you are working with and a .data file linking all data together. 
 The configuration changes with the number of classes you are working on, for detailled explaination, please refer to https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects. 
 
