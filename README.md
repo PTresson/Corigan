@@ -16,7 +16,7 @@ pipeline is to excecute from the 'pipeline' directory, not 'core' directory
 ~/pipeline$ python3 core/pipeline.py
 
 
-# TRAIN THE MODEL
+# Train the model
 
 Copy your train dataset (images and labels) into the 'train_images' directory.
 .cfg file and .names file should be in the 'cfg' directory. A train.data file will be generated automatically.
@@ -25,7 +25,7 @@ To start training, execute the following command line inside the 'pipeline' dire
 ~/pipeline$ python3 core/pipeline.py --mode='train'
  
 
-# TEST THE MODEL
+# Test the model
 
 Copy your test dataset (images and labels) into the 'test_images' directory.
 .cfg file and .names file should be in the 'cfg' directory. The pipeline will use the previously generated train.data file but you can change it easily.
