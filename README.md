@@ -86,14 +86,14 @@ If you only want the detections of the network without a performance analysis, y
 
 If you are using the pipeline with a windows environnement, change the command lines 
 
-#132 cmd = './darknetpipe detector train ' + data_file_path_short + ' ' + cfg_file_path_short + ' ' + pre_trained_layers + ''
+#132 cmd = './darknet detector train ' + data_file_path_short + ' ' + cfg_file_path_short + ' ' + pre_trained_layers + ''
 and 
-#180 cmd = './darknetpipe detector test ' + data_file_path_short + ' ' + cfg_file_path_short + ' ' + weights_file_path_short + ' -dont_show -ext_output < ' + test_list_file_short + ' > ' + result_file_short + ''
+#180 cmd = './darknet detector test ' + data_file_path_short + ' ' + cfg_file_path_short + ' ' + weights_file_path_short + ' -dont_show -ext_output < ' + test_list_file_short + ' > ' + result_file_short + ''
 
 to
-#132 cmd = 'darknetpipe.exe detector train ' + data_file_path_short + ' ' + cfg_file_path_short + ' ' + pre_trained_layers + ''
+#132 cmd = 'darknet.exe detector train ' + data_file_path_short + ' ' + cfg_file_path_short + ' ' + pre_trained_layers + ''
 and 
-#180 cmd = 'darknetpipe.exe detector test ' + data_file_path_short + ' ' + cfg_file_path_short + ' ' + weights_file_path_short + ' -dont_show -ext_output < ' + test_list_file_short + ' > ' + result_file_short + ''
+#180 cmd = 'darknet.exe detector test ' + data_file_path_short + ' ' + cfg_file_path_short + ' ' + weights_file_path_short + ' -dont_show -ext_output < ' + test_list_file_short + ' > ' + result_file_short + ''
 
 # ecological outputs
 
