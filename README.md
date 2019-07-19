@@ -95,7 +95,7 @@ to
 and 
 #180 cmd = 'darknet.exe detector test ' + data_file_path_short + ' ' + cfg_file_path_short + ' ' + weights_file_path_short + ' -dont_show -ext_output < ' + test_list_file_short + ' > ' + result_file_short + ''
 
-# ecological outputs
+# Ecological outputs
 
-outputs will be found in the 'results' directory.
-some computations require an additional _predation.names file with the 'prey' or 'predator' status of a species.
+Outputs will be found in the 'results' directory.
+R scripts for generating plots with the data are available in the 'result' directory as well.
