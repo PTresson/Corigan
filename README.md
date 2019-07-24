@@ -76,26 +76,12 @@ If you are not changing your dataset, you might want to skip slicing. In this ca
 ~/pipeline$ python3 core/pipeline.py --mode='train' --dont_slice=True
 ~/pipeline$ python3 core/pipeline.py --mode='test' --dont_slice=True
 
-# Skip comparison with GT
+# Skip comparison with ground truth
 
 If you only want the detections of the network without a performance analysis, you can skip this part by specifying:
 
 ~/pipeline$ python3 core/pipeline.py --mode='train' --dont_metrics=True
 ~/pipeline$ python3 core/pipeline.py --mode='test' --dont_metrics=True
-
-
-# Use with windows
-
-If you are using the pipeline with a windows environnement, change the command lines 
-
-#132 cmd = './darknet detector train ' + data_file_path_short + ' ' + cfg_file_path_short + ' ' + pre_trained_layers + ''
-and 
-#180 cmd = './darknet detector test ' + data_file_path_short + ' ' + cfg_file_path_short + ' ' + weights_file_path_short + ' -dont_show -ext_output < ' + test_list_file_short + ' > ' + result_file_short + ''
-
-to
-#132 cmd = 'darknet.exe detector train ' + data_file_path_short + ' ' + cfg_file_path_short + ' ' + pre_trained_layers + ''
-and 
-#180 cmd = 'darknet.exe detector test ' + data_file_path_short + ' ' + cfg_file_path_short + ' ' + weights_file_path_short + ' -dont_show -ext_output < ' + test_list_file_short + ' > ' + result_file_short + ''
 
 # Ecological outputs
 
