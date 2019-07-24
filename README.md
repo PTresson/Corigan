@@ -6,7 +6,7 @@ Neural network related computations are performed within the Darknet framework p
 To work, Darknet needs a .cfg file specifying the configuration of the network, a .names file specifying the classes you are working with and a .data file linking all data together. 
 The configuration changes with the number of classes you are working on, for detailled explaination, please refer to https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects. 
 
-The Darknet executive should ultimatly be in the 'Corigan' directory.You can compile Darknet inside the 'pipeline' directory or elsewhere and later copy the darknet executive to the 'Corigan' directory.
+The Darknet executive should ultimatly be in the 'Corigan' directory.You can compile Darknet inside the 'Corigan' directory or elsewhere and later copy the darknet executive to the 'Corigan' directory.
 .cfg, .names and .data are in the 'cfg' directory.
 
 
