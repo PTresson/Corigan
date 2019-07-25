@@ -2,6 +2,8 @@
 
 Corigan is a pipeline for the detection of small objects on large input images and the analysis of the interactions between these objects.
 
+![alt text](https://github.com/PTresson/Corigan/blob/master/test_temp/plot/Perico_13_11_2018_00051_plot.jpg)
+
 ## Requierements
 
 Neural network related computations require CUDNN >= 7.0, CUDA >= 9.0 and OpenCV >= 2.4 (optional). Interactions require Python 3.6, numpy and pandas. Analysis scripts work best with python-opencv but are possible with PIL. Matplotlib is used for ploting the results.
