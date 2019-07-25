@@ -2,9 +2,16 @@
 
 Corigan is a pipeline for the detection of small objects on large input images and the analysis of the interctions between these objects.
 
+# Requierements
+
+Neural network related computations require CUDNN >= 7.0, CUDA >= 9.0 and OpenCV >= 2.4 (optional). Interactions require Python 3.6, numpy and pandas. Analysis scripts work best with python-opencv but are possible with PIL. Matplotlib is used for ploting the results.
+A working Dockerfile will be provided anytime soon.
+
 Neural network related computations are performed within the Darknet framework provided by J. Redmon and maintained by AlexeyAB https://github.com/AlexeyAB/darknet. We recommand that you have tested the Darknet framework first.
 To work, Darknet needs a .cfg file specifying the configuration of the network, a .names file specifying the classes you are working with and a .data file linking all data together. 
 The configuration changes with the number of classes you are working on, for detailled explaination, please refer to https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects. 
+
+# Use
 
 The Darknet executive should ultimatly be in the 'Corigan' directory.You can compile Darknet inside the 'Corigan' directory or elsewhere and later copy the darknet executive to the 'Corigan' directory.
 .cfg, .names and .data are in the 'cfg' directory.
