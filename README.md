@@ -1,6 +1,6 @@
 # CORIGAN
 
-Corigan is a pipeline for the detection of small objects on large input images and the analysis of the interctions between these objects.
+Corigan is a pipeline for the detection of small objects on large input images and the analysis of the interactions between these objects.
 
 ## Requierements
 
