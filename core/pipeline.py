@@ -16,7 +16,7 @@ from count_object_per_class import find_all_files
 import insects_analysis
 
 # initialize time
-t0 = time.time()
+t0 = time.time() #tentative d'édit par Tom
 
 ###############################                  update options             ############################################
 
