@@ -7,7 +7,22 @@ Corigan is a pipeline for the detection of small objects on large input images a
 ## Requierements
 
 Neural network related computations require CUDNN >= 7.0, CUDA >= 9.0 and OpenCV >= 2.4 (optional). Interactions require Python 3.6, numpy and pandas. Analysis scripts work best with python-opencv but are possible with PIL. Matplotlib is used for ploting the results.
-A working Dockerfile will be provided anytime soon.
+
+### Running with docker.
+
+We provide a Dockerfile to generate a functionning docker image. Once built, you can work within containers and not have to worry about configurations, requierements, or eventual problems damaging your system. This docker image is based on a ubuntu 16.04 image with CUDA 9.0, CUDNN 7.6. python 3 and OpenCV 3.2.
+
+To create a docker, you first have to install [nvidia-docker](https://github.com/NVIDIA/nvidia-docker).
+
+Then, buid the docker image from the `/corigan` directory using `nvidia-docker build --no-cache -t corigan .`, where `corgian`can be any name you want.
+
+Once the image built, to run a container using this image, use `nvidia-docker run -it -v /path/to/your/working/directory:/path/to/your/working/directory --name your_container_name corigan`.
+
+You can then work inside your cointainer.
+
+To quit the container, use `ctrl+p` `ctrl+q`. To stop the container, use `docker stop your_container_name`. To remove the container, use `docker rm your_container_name`.
+
+### Using Darknet
 
 Neural network related computations are performed within the Darknet framework provided by J. Redmon and maintained by AlexeyAB https://github.com/AlexeyAB/darknet. We recommand that you have tested the Darknet framework first.
 To work, Darknet needs a `.cfg` file specifying the configuration of the network, a `.names` file specifying the classes you are working with and a `.data` file linking all data together. 
