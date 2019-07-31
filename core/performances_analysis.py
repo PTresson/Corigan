@@ -232,7 +232,11 @@ def get_metrics(test_im_dir,detection_csv_file, names_file, examples_file_path, 
 
     precision_general = float(TP / (TP + FP))
     recall_general = float(TP / (TP + FN))
-    F1_general = 2 * float((precision_general * recall_general) / (precision_general + recall_general))
+     if float((precision_general + recall_general)) != 0:
+        F1_general = 2 * float((precision_general * recall_general) / (precision_general + recall_general))
+    else:
+        print('Something is wrong, precision is 0.0 and recall is 0.0. Maybe check that correct classes are used ?')
+        F1_general = 0
 
 
     ########################### mAP #############################
