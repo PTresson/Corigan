@@ -14,7 +14,7 @@ We provide a Dockerfile to generate a functionning docker image. Once built, you
 
 To create a docker, you first have to install [nvidia-docker](https://github.com/NVIDIA/nvidia-docker).
 
-Then, buid the docker image from the `/corigan` directory using `nvidia-docker build --no-cache -t corigan .`, where `corgian`can be any name you want.
+Then, buid the docker image from the `/Corigan` directory using `nvidia-docker build --no-cache -t corigan .`, where `corgian`can be any name you want.
 
 Once the image built, to run a container using this image, use `nvidia-docker run -it -v /path/to/your/working/directory:/path/to/your/working/directory --name your_container_name corigan`.
 
