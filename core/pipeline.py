@@ -11,6 +11,7 @@ from slice import slice_train, slice_test
 import slice_PIL
 from plot_bbox import plot_bbx
 from refine_date import refine_detections
+from refine_mutliprocessing import multi_proc_manager
 from performances_analysis import get_metrics, get_confusion_matrix
 from count_object_per_class import find_all_files
 import insects_analysis
@@ -40,6 +41,8 @@ parser.add_argument('--train_record', type=str, default=False,
                     help="True to export training info for further analysis")
 parser.add_argument('--get_outputs', type=str, default=False,
                     help="True to get ecological outputs")
+parser.add_argument('--dont_multiprocessing', type=str, default=False,
+                    help="disable multiprocessing during refine step")
 
 # set parameters for slicing and refining
 
@@ -78,6 +81,7 @@ dont_perform_metrics = args.dont_metrics
 dont_use_openCV = args.dont_use_openCV
 train_record = args.train_record
 get_outputs = args.get_outputs
+dont_multiprocessing = args.dont_multiprocessing
 
 slice_width = args.slice_width
 slice_overlap = args.slice_overlap
@@ -269,7 +273,12 @@ if mode == 'test':
 
     ##################################### refine detections ############################################
 
-    refine_detections(result_file_short, detection_threshold=float(dt_thr), overlap_threshold=float(ov_thr),test_im_dir=test_im_dir)
+    if not dont_multiprocessing:
+      # multiprocessing enables computations on several CPUs, reducing calculation time.
+      multi_proc_manager(test_im_dir, result_file_short, float(ov_thr), float(dt_thr))
+    
+    else:
+      refine_detections(result_file_short, detection_threshold=float(dt_thr), overlap_threshold=float(ov_thr),test_im_dir=test_im_dir)
 
     detection_df = pandas.read_csv('test_temp/refined_detections.csv')
 
