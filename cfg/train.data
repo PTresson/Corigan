@@ -1,0 +1,4 @@
+classes= 37
+train= /home/tresson/corigan/train_temp/train.txt
+names= /home/tresson/corigan/cfg/insects_detailed.names
+backup = /home/tresson/corigan/train_temp/backup
