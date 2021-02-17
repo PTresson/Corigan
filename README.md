@@ -1,5 +1,6 @@
 # CORIGAN
 
+NOTE : Maintained version is now on [GitLab](https://gitlab.com/ptresson/corigan/-/tree/master)
 Corigan is a pipeline for the detection of small objects on large input images and the analysis of the interactions between these objects. If you plan on using Corigan, please consider citing the [corresponding paper](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.13281). The paper is free of access and describes more precisely the functionning of the pipeline.
 
 ![alt text](https://github.com/PTresson/Corigan/blob/master/test_temp/plot/Perico_13_11_2018_00051_plot.jpg)
